@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.noovo-lefil"
+version="0.0.1"
+name="Noovo Le Fil video plugin"
+provider-name="fndemers">
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.9.3"/>
+    <import addon="script.module.youtube.dl" version="21.303.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Noovo Le Fil Video Plugin</summary>
+  <description lang="en_GB">Noovo Le Fil Video Plugin</description>
+  <disclaimer lang="en_GB">Noovo Le Fil Video Plugin</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>News journal Le Fil</news>
+</extension>
+</addon>
