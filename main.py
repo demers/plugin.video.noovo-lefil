@@ -9,13 +9,26 @@ import sys
 from urllib.parse import urlencode, parse_qsl
 import xbmcgui
 import xbmcplugin
+import xbmc
+
 # from bs4 import BeautifulSoup
 # from BeautifulSoup import BeautifulSoup
+
 
 # Get the plugin url in plugin:// notation.
 _URL = sys.argv[0]
 # Get the plugin handle as an integer number.
 _HANDLE = int(sys.argv[1])
+
+url17 = 'https://www.noovo.ca/emissions/noovo-le-fil-17-50204'
+
+# import resolveurl
+# resolved17 = ''
+import resolveurl as urlresolver
+resolved17 = urlresolver.resolve(url17)
+# if resolveurl.HostedMediaFile(url17):
+    # resolved17 = resolveurl.resolve(url17)
+xbmc.log('Message: ' + str(resolved17))
 
 # Free sample videos are provided by www.vidsplay.com
 # Here we use a fixed set of properties simply for demonstrating purposes
@@ -23,7 +36,7 @@ _HANDLE = int(sys.argv[1])
 # from some web-site or online service.
 VIDEOS = {'Le Fil': [{'name': 'Le Fil 17',
                        'thumb': 'https://images2.9c9media.com/image_asset/2021_4_16_8cef1220-37ab-48fe-8443-0b0ea357c097_png_2000x3000.jpg',
-                       'video': 'http://www.vidsplay.com/wp-content/uploads/2017/04/crab.mp4',
+                       'video': resolved17,
                        'genre': 'Le Fil'},
                       {'name': 'Le Fil 22',
                        'thumb': 'https://images2.9c9media.com/image_asset/2021_4_16_70e6908d-92a5-40c6-a512-80c3a02887e2_png_2000x3000.jpg',
